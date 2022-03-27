@@ -111,3 +111,33 @@ li {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+.content {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+}
+
+.content
+.projects {
+    display: grid;
+    grid-template-rows: 80px 1fr;
+}
+
+.content
+.side-content {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.announcements,
+.trending {
+    display: grid;
+    grid-template-rows: 80px 1fr;
+}
+
+.projects
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fill, 1fr);
+}
