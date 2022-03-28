@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    border: 1px solid black;
 }
 
 body {
@@ -20,6 +19,10 @@ body {
     --sidebar-color: #568ce3;
     --header-color: #fafafa;
     --content-color: #e5e7eb;
+}
+
+a {
+    text-decoration: none;
 }
 
 #main {
@@ -61,6 +64,25 @@ body {
 .logo,
 .side-button {
     color: var(--header-color);
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.side-button {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.icon {
+    justify-self: center;
+}
+
+.icon svg {
+    height: 24px;
+    width: 24px;
 }
 
 .logo {
