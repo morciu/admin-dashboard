@@ -15,6 +15,10 @@ body {
     /* Fonts */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
+    /* Font sizes */
+    --header-size: 32px;
+    --title-size: 20px;
+
     /* Colors */
     --sidebar-color: #568ce3;
     --header-color: #fafafa;
@@ -86,7 +90,7 @@ a {
 }
 
 .logo {
-    font-size: 32px;
+    font-size: var(--header-size);
     font-weight: 600;
     align-self: flex-start;
 }
@@ -100,7 +104,7 @@ a {
 }
 
 li {
-    font-size: 20px;
+    font-size: var(--title-size);
     font-weight: 600;
 }
 
@@ -120,6 +124,10 @@ li {
 .current-user {
     display: grid;
     grid-template-columns: 4fr 2fr 4fr;
+}
+
+.user-name {
+    font-size: var(--title-size);
 }
 
 .bottom-header
@@ -142,7 +150,7 @@ li {
 .content
 .projects {
     display: grid;
-    grid-template-rows: 80px 1fr;
+    grid-template-rows: 50px 1fr;
 }
 
 .content
@@ -154,7 +162,7 @@ li {
 .announcements,
 .trending {
     display: grid;
-    grid-template-rows: 80px 1fr;
+    grid-template-rows: 50px 1fr;
 }
 
 .projects
@@ -162,6 +170,8 @@ li {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(auto-fill, 1fr);
+    gap: 30px;
+    padding: 15px 30px;
 }
 
 .search-button button {
@@ -178,4 +188,84 @@ li {
     border-radius: 12px;
     border: none;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.top-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.bottom-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.user-greet {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.button-new,
+.button-upload,
+.button-share {
+    display: grid;
+}
+
+.header-buttons button {
+    background-color: var(--sidebar-color);
+    color: var(--header-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    place-self: center;
+    height: 40%;
+    width: 80%;
+    border-radius: 24px;
+    border: none;
+}
+
+.title {
+    font-size: var(--title-size);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.projects
+.title {
+    padding-left: 30px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    grid-template-rows: 1fr 3fr 1.5fr;
+
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.accent-column {
+    grid-row: 1 / 4;
+    background-color: #ffae50;
+}
+
+.card-title,
+.card-text,
+.card-controls {
+    grid-column: 2 / -1;
+    background-color: var(--header-color);
+}
+
+.card-controls {
+    display: grid;
+    grid-template-columns: 30px 30px 30px;
+    grid-template-rows: 30px;
+    justify-content: end;
+    gap: 20px;
 }
