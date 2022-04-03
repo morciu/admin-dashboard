@@ -185,10 +185,9 @@ li {
     grid-template-rows: 50px 1fr;
 }
 
-.content
-.side-content {
+.content {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 .side-content {
@@ -207,7 +206,7 @@ li {
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(150px, 200px));
+    grid-template-rows: repeat(3, 200px);
     gap: 30px;
     padding: 15px 30px;
 }
@@ -396,15 +395,16 @@ svg {
     text-overflow: ellipsis;
 }
 
+.ann-2nd {
+    border-top: 1px solid #a4a7aa;
+    border-bottom: 1px solid #a4a7aa;
+}
+
+.ann-1st,
 .ann-2nd,
 .ann-3rd {
     padding-top: 15px;
     padding-bottom: 15px;
-}
-
-.ann-2nd {
-    border-top: 1px solid #a4a7aa;
-    border-bottom: 1px solid #a4a7aa;
 }
 
 .trending-list {
