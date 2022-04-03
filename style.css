@@ -23,6 +23,7 @@ body {
     --sidebar-color: #568ce3;
     --header-color: #fafafa;
     --content-color: #e5e7eb;
+    --plain-text: #4f5255;
 }
 
 a {
@@ -190,6 +191,11 @@ li {
     grid-template-rows: 1fr 1fr;
 }
 
+.side-content {
+    padding-right: 30px;
+    padding-bottom: 20px;
+}
+
 .announcements,
 .trending {
     display: grid;
@@ -200,8 +206,8 @@ li {
 .projects
 .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(150px, 200px));
     gap: 30px;
     padding: 15px 30px;
 }
@@ -307,6 +313,7 @@ svg {
 .projects
 .title {
     padding-left: 30px;
+    font-weight: 550;
 }
 
 .card {
@@ -316,6 +323,21 @@ svg {
 
     border-radius: 12px;
     overflow: hidden;
+}
+
+.card-title {
+    font-weight: 550;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: grid;
+    align-items: flex-end;
+}
+
+.card-text {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    color: var(--plain-text);
 }
 
 .card,
@@ -342,6 +364,21 @@ svg {
     grid-template-rows: 30px;
     justify-content: end;
     gap: 20px;
+    padding-right: 20px;
+}
+
+.announcements
+.title,
+.trending
+.title {
+    font-weight: 550;
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ann-card-title {
+    font-weight: 550;
 }
 
 .ann-card {
@@ -349,11 +386,25 @@ svg {
     grid-template-rows: 1fr 1fr 1fr;
     background-color: var(--header-color);
     border-radius: 12px;
+    padding: 20px;
+}
+
+.ann-card-text {
+    font-size: smaller;
+    color: var(--plain-text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ann-2nd,
+.ann-3rd {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .ann-2nd {
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+    border-top: 1px solid #a4a7aa;
+    border-bottom: 1px solid #a4a7aa;
 }
 
 .trending-list {
@@ -365,6 +416,9 @@ svg {
 .trending-card {
     display: grid;
     grid-template-rows: 1fr;
+    background-color: var(--header-color);
+    border-radius: 12px;
+    padding: 20px;
 }
 
 .trending-project {
@@ -376,6 +430,9 @@ svg {
 .trending-project
 .icon {
     grid-row: 1 / 3;
+}
+.icon
+img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
